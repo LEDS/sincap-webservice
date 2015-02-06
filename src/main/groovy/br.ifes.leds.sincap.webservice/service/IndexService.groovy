@@ -2,20 +2,15 @@ package br.ifes.leds.sincap.webservice.service
 
 import br.ifes.leds.reuse.utility.Utility
 import br.ifes.leds.sincap.controleInterno.cln.cgt.AplCadastroInterno
-import br.ifes.leds.sincap.gerenciaNotificacao.cln.cdp.EstadoNotificacaoEnum
-import br.ifes.leds.sincap.gerenciaNotificacao.cln.cdp.TipoNaoDoacao
 import br.ifes.leds.sincap.gerenciaNotificacao.cln.cgt.AplProcessoNotificacao
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.security.access.annotation.Secured
 import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
 
 import static br.ifes.leds.sincap.gerenciaNotificacao.cln.cdp.EstadoNotificacaoEnum.AGUARDANDOCAPTACAO
-import static br.ifes.leds.sincap.gerenciaNotificacao.cln.cdp.TipoNaoDoacao.PROBLEMAS_ESTRUTURAIS
 import static br.ifes.leds.sincap.gerenciaNotificacao.cln.cdp.TipoNaoDoacao.PROBLEMAS_LOGISTICOS
-import static br.ifes.leds.sincap.webservice.service.ContextUrls.APP_NOTIFICACAO_CAPTACAO
-import static br.ifes.leds.sincap.webservice.service.ContextUrls.GET_ASPECTOSLOGISTICOS
-import static br.ifes.leds.sincap.webservice.service.ContextUrls.GET_CAPTACOES
+import static br.ifes.leds.sincap.webservice.service.ContextUrls.*
 import static org.springframework.web.bind.annotation.RequestMethod.GET
 
 @RestController
@@ -34,6 +29,7 @@ class IndexService {
     }
 
     @RequestMapping(value = GET_CAPTACOES, method = GET)
+    @Secured('IS_AUTHENTICATED_ANONYMOUSLY')
     def getListNotificacoes() {
         aplProcessoNotificacao.retornarNotificacaoPorEstadoAtualEBancoOlhos AGUARDANDOCAPTACAO, 2L
     }
