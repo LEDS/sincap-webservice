@@ -4,7 +4,6 @@ import br.ifes.leds.reuse.utility.Utility
 import br.ifes.leds.sincap.controleInterno.cln.cgt.AplCadastroInterno
 import br.ifes.leds.sincap.gerenciaNotificacao.cln.cgt.AplProcessoNotificacao
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
