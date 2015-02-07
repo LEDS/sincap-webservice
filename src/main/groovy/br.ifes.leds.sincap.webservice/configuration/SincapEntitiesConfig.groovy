@@ -20,7 +20,7 @@ class SincapEntitiesConfig {
      *
      * @return Uma bean EntityManagerFactory
      */
-    @Bean
+    @Bean(name = ['myEmf', 'entityManagerFactory'])
     def entityManagerFactory() {
         myEmf
     }
