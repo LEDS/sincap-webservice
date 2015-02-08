@@ -1,7 +1,7 @@
 package br.ifes.leds.sincap.webservice
 
-import br.ifes.leds.sincap.webservice.util.Autoridade
-import br.ifes.leds.sincap.webservice.util.UserAdapter
+import br.ifes.leds.sincap.webservice.configuration.security.user.Autoridade
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserAdapter
 
 class UserBuilder {
     UserAdapter user

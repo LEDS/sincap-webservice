@@ -1,4 +1,4 @@
-package br.ifes.leds.sincap.webservice.util;
+package br.ifes.leds.sincap.webservice.configuration.security.user;
 
 import org.springframework.security.core.userdetails.UserDetails;
 

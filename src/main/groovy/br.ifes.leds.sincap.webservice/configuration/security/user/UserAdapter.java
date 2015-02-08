@@ -1,4 +1,4 @@
-package br.ifes.leds.sincap.webservice.util;
+package br.ifes.leds.sincap.webservice.configuration.security.user;
 
 import br.ifes.leds.sincap.controleInterno.cln.cdp.Funcionario;
 import br.ifes.leds.sincap.controleInterno.cln.cdp.Permissao;

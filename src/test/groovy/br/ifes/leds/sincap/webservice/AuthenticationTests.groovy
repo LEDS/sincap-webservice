@@ -1,9 +1,9 @@
 package br.ifes.leds.sincap.webservice
 
 import br.ifes.leds.sincap.controleInterno.cln.cgt.AplCadastroInterno
-import br.ifes.leds.sincap.webservice.util.UserAdapter
-import br.ifes.leds.sincap.webservice.util.UserDetailsService
-import br.ifes.leds.sincap.webservice.util.UserDetailsServiceAdapter
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserAdapter
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserDetailsService
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserDetailsServiceAdapter
 import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean

@@ -1,7 +1,7 @@
 package br.ifes.leds.sincap.webservice
 
 import br.ifes.leds.sincap.webservice.configuration.security.TokenHandler
-import br.ifes.leds.sincap.webservice.util.User
+import br.ifes.leds.sincap.webservice.configuration.security.user.User
 import org.junit.Before
 import org.junit.Test
 

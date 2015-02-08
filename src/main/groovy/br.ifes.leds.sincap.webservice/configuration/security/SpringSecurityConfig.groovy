@@ -1,6 +1,6 @@
 package br.ifes.leds.sincap.webservice.configuration.security
 
-import br.ifes.leds.sincap.webservice.util.UserDetailsService
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserDetailsService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

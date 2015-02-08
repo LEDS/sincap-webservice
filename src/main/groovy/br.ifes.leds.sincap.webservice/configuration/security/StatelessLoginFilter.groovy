@@ -1,8 +1,8 @@
 package br.ifes.leds.sincap.webservice.configuration.security
 
-import br.ifes.leds.sincap.webservice.util.User
-import br.ifes.leds.sincap.webservice.util.UserAdapter
-import br.ifes.leds.sincap.webservice.util.UserDetailsService
+import br.ifes.leds.sincap.webservice.configuration.security.user.User
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserAdapter
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserDetailsService
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken

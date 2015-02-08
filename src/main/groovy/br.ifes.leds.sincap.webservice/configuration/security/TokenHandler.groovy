@@ -1,7 +1,7 @@
 package br.ifes.leds.sincap.webservice.configuration.security
 
-import br.ifes.leds.sincap.webservice.util.User
-import br.ifes.leds.sincap.webservice.util.UserAdapter
+import br.ifes.leds.sincap.webservice.configuration.security.user.User
+import br.ifes.leds.sincap.webservice.configuration.security.user.UserAdapter
 import com.fasterxml.jackson.core.JsonProcessingException
 import com.fasterxml.jackson.databind.ObjectMapper
 
