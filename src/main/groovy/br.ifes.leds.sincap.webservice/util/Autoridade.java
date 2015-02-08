@@ -3,8 +3,10 @@ package br.ifes.leds.sincap.webservice.util;
 
 import br.ifes.leds.sincap.controleInterno.cln.cdp.Permissao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.EqualsAndHashCode;
 import org.springframework.security.core.GrantedAuthority;
 
+@EqualsAndHashCode
 public class Autoridade implements GrantedAuthority {
     private String authority;
 
