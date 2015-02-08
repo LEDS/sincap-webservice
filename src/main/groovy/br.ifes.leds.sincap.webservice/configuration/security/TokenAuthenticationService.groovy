@@ -39,6 +39,5 @@ class TokenAuthenticationService {
                 new UserAuthentication(user)
             }
         }
-        null
     }
 }
