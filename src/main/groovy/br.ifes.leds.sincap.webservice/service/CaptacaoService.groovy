@@ -5,7 +5,6 @@ import br.ifes.leds.sincap.controleInterno.cln.cgt.AplCadastroInterno
 import br.ifes.leds.sincap.gerenciaNotificacao.cln.cdp.dto.CaptacaoDTO
 import br.ifes.leds.sincap.gerenciaNotificacao.cln.cgt.AplProcessoNotificacao
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.annotation.Secured
 import org.springframework.security.access.prepost.PreAuthorize
@@ -36,8 +35,8 @@ class CaptacaoService {
     @RequestMapping(value = CAPTACAO, method = GET)
     @Secured('ROLE_CAPTADOR')
     def getListNotificacoes(@RequestParam('bancoolhos.id') Long idBancoOlhos) {
-        aplProcessoNotificacao.retornarNotificacaoPorEstadoAtualEBancoOlhos AGUARDANDOCAPTACAO, idBancoOlhos
-        new ResponseEntity(OK)
+        def processos = aplProcessoNotificacao.retornarNotificacaoPorEstadoAtualEBancoOlhos AGUARDANDOCAPTACAO, idBancoOlhos
+        new ResponseEntity(processos, OK)
     }
 
     @RequestMapping(value = CAPTACAO, method = POST)
@@ -50,7 +49,7 @@ class CaptacaoService {
     @RequestMapping(value = ASPECTOSLOGISTICOS, method = GET)
     @PreAuthorize('isAuthenticated()')
     def getAspectosLogisticos() {
-        aplCadastroInterno.obterCausaNaoDoacao PROBLEMAS_LOGISTICOS
-        new ResponseEntity(OK)
+        def causas = aplCadastroInterno.obterCausaNaoDoacao PROBLEMAS_LOGISTICOS
+        new ResponseEntity(causas, OK)
     }
 }
