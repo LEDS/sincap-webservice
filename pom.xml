@@ -31,6 +31,7 @@
             <groupId>br.ifes.leds.sincap</groupId>
             <artifactId>SincapEntities</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
 
             <!-- Entra em conflito com spring boot -->
             <exclusions>
@@ -103,6 +104,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <compilerId>groovy-eclipse-compiler</compilerId>
+                    <fork>true</fork>
+                    <compilerArguments>
+                        <javaAgentClass>lombok.core.Agent</javaAgentClass>
+                    </compilerArguments>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -114,6 +119,11 @@
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-eclipse-batch</artifactId>
                         <version>2.3.7-01</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>0.11.0</version>
                     </dependency>
                 </dependencies>
             </plugin>
