@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 @RunWith(SpringJUnit4ClassRunner)
 @SpringApplicationConfiguration(classes = Application)
 @WebAppConfiguration
-class BaseMocksTests {
+abstract class BaseMocksTests {
     MockMvc mockMvc
 
     @Autowired
