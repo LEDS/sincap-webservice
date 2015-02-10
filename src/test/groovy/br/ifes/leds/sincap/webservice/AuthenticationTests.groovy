@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Primary
+import org.springframework.context.annotation.Profile
+import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.servlet.MvcResult
 
 import static br.ifes.leds.sincap.webservice.UserBuilder.userBuilder
@@ -19,9 +21,11 @@ import static org.springframework.http.MediaType.APPLICATION_JSON
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
+@ActiveProfiles(['test', 'AuthenticationTests'])
 class AuthenticationTests extends BaseMocksTests {
 
     @Configuration
+    @Profile('AuthenticationTests')
     static class UserDetailServiceConfig {
         @Bean
         @Primary
