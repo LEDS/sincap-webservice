@@ -18,9 +18,8 @@ class TokenAuthenticationService {
 
     private final TokenHandler tokenHandler;
 
-    // TODO: Substituir a chave por um campo em application.properties
     @Autowired
-    def TokenAuthenticationService(@Value('9SyECk96oDsTmXfogIieDI0cD/8FpnojlYSUJT5U9I/FGVmBz5oskmjOR8cbXTvoPjX+Pq/T/b1PqpHX0lYm0oCBjXWICA==') String secret) {
+    def TokenAuthenticationService(@Value('${token.secret}') String secret) {
         tokenHandler = new TokenHandler(DatatypeConverter.parseBase64Binary(secret))
     }
 

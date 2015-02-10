@@ -1,27 +1,20 @@
 package br.ifes.leds.sincap.webservice.configuration
 
-import org.springframework.beans.factory.annotation.Autowired
+import org.dozer.DozerBeanMapper
+import org.springframework.boot.orm.jpa.EntityScan
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.ImportResource
 
-import javax.persistence.EntityManagerFactory
-
 @Configuration
-@ImportResource(value = 'classpath:spring-context.xml')
+@ImportResource(value = 'classpath:spring-shared-context.xml')
+@EntityScan(basePackages = ['br.ifes.leds.**.cdp', 'br.ifes.leds.reuse.persistence'])
 class SincapEntitiesConfig {
-    @Autowired
-    EntityManagerFactory myEmf
 
-    /**
-     * Método que adapta a configuração de banco de dados do sincap entities.
-     * O Spring Boot espera uma bean com o nome entityManagerFactory, porém o
-     * sincap-entities cria uma bean com o nome de myEmf.
-     *
-     * @return Uma bean EntityManagerFactory
-     */
-    @Bean(name = ['myEmf', 'entityManagerFactory'])
-    def entityManagerFactory() {
-        myEmf
+    @Bean
+    DozerBeanMapper mapper() {
+        def mapper = new DozerBeanMapper()
+        mapper.mappingFiles = ['dozerBeanMapping.xml']
+        mapper
     }
 }
