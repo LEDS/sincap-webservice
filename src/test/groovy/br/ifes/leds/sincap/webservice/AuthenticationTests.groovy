@@ -21,7 +21,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-@ActiveProfiles(['test', 'AuthenticationTests'])
+@ActiveProfiles(['dev', 'AuthenticationTests'])
 class AuthenticationTests extends BaseMocksTests {
 
     @Configuration

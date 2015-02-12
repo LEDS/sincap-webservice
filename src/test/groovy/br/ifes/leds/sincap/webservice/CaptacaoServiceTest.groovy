@@ -42,7 +42,7 @@ import static org.mockito.Mockito.mock
 import static org.mockito.Mockito.when
 import static org.springframework.http.MediaType.APPLICATION_JSON
 
-@ActiveProfiles(['test', 'CaptacaoServiceTest'])
+@ActiveProfiles(['dev', 'CaptacaoServiceTest'])
 @IntegrationTest('server.port:0')
 class CaptacaoServiceTest extends BaseMocksTests {
 
