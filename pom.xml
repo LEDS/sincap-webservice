@@ -22,6 +22,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>br.ifes.leds.sincap.webservice.Application</start-class>
+        <sonar.host.url>http://ledszeppellin.sr.ifes.edu.br:9000</sonar.host.url>
+        <sonar.jdbc.url>jdbc:postgresql://ledszeppellin.sr.ifes.edu.br:5432/sonar</sonar.jdbc.url>
+        <sonar.jdbc.password>xaexohquaetiesoo</sonar.jdbc.password>
         <java.version>1.7</java.version>
     </properties>
     
