@@ -1,11 +1,15 @@
 language: java
 
-sudo: false
-
 jdk:
- - oraclejdk8 
  - oraclejdk7
-
+ 
 branches:
   only:
     - master
+    - development
+
+after_success:
+  - mvn sonar:sonar
+
+notifications:
+  slack: leds:Bdewxwg54FgRsFjl9zN5iRFI
