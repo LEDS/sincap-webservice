@@ -23,15 +23,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>br.ifes.leds.sincap.webservice.Application</start-class>
         <sonar.host.url>http://ledszeppellin.sr.ifes.edu.br:9000</sonar.host.url>
-        <sonar.jdbc.url>jdbc:postgresql://ledszeppellin.sr.ifes.edu.br:5432/sonar</sonar.jdbc.url>
-        <sonar.jdbc.password>xaexohquaetiesoo</sonar.jdbc.password>
+        <sonar.login>leds</sonar.login>
+	<sonar.password>ledssonar</sonar.password>
         <java.version>1.7</java.version>
     </properties>
     
     <repositories>
       <repository>
 	<id>Leds repository</id>
-	<url>http://ledszeppellin.sr.ifes.edu.br:82/content/groups/public/</url>
+	<url>http://ledszeppellin.sr.ifes.edu.br:8081/content/groups/public/</url>
       </repository>
     </repositories>
 
